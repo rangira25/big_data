@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from classify.views import classify_digit
+from classify.views import home, predict_digit
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', classify_digit, name='classify_digit'),
+    path('', home, name='home'),
+    path('predict/', predict_digit, name='predict_digit'),
 ]
